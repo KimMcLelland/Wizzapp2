@@ -1,0 +1,25 @@
+[gd_scene format=2]
+
+[node name="Winscreen" type="Node"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1023.0
+margin_bottom = 597.0
+color = Color( 0.176471, 0.788235, 0.788235, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 282.0
+margin_top = 290.0
+margin_right = 677.0
+margin_bottom = 500.0
+text = "You made it home!!!
+
+Congratulations!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

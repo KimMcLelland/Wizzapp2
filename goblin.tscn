@@ -1,12 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Goblin1.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/Goblin3.png" type="Texture" id=1]
 [ext_resource path="res://goblin.gd" type="Script" id=2]
-[ext_resource path="res://Goblin2.png" type="Texture" id=3]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "walk",
 "speed": 5.0
@@ -15,7 +14,7 @@ animations = [ {
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 12.0
 
-[node name="goblin" type="KinematicBody2D"]
+[node name="goblin" type="Area2D"]
 position = Vector2( 335.497, 66.1893 )
 script = ExtResource( 2 )
 __meta__ = {
@@ -31,3 +30,5 @@ animation = "walk"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 1, 6 )
 shape = SubResource( 2 )
+
+[connection signal="body_entered" from="." to="." method="_on_goblin_body_entered"]
