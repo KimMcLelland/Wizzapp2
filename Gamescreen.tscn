@@ -24,7 +24,7 @@ position = Vector2( 704, 504 )
 position = Vector2( 753, 506 )
 
 [node name="wizard" parent="." instance=ExtResource( 1 )]
-position = Vector2( 61, 571 )
+position = Vector2( 63, 582 )
 
 [node name="goblin" parent="." instance=ExtResource( 3 )]
 position = Vector2( 715, 470 )
