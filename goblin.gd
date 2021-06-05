@@ -13,8 +13,7 @@ func _physics_process(delta):
 	var velocity = Vector2()
 	vel = move_and_slide(vel, Vector2.UP)
 	vel.y += gravity * delta
+	#position.x = clamp(position.x, 25, screen_size.x-25)
 	 
 
 
-func _on_VisibilityNotifier2D_screen_exited():
-	vel.x = -vel.x
