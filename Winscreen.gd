@@ -21,4 +21,4 @@ func _on_replay_button_pressed():
 
 
 func _on_quit_button2_pressed():
-	pass
+	get_tree().quit()

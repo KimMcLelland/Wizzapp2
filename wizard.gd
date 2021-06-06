@@ -36,6 +36,11 @@ func _physics_process(delta):
 		var fireball = FIREBALL.instance()
 		get_parent().add_child(fireball)
 		fireball.position = $Position2D.global_position
+	if vel.x != 0 || Input.is_action_pressed("fire"):
+		$AnimatedSprite.animation = "walk"
+		$AnimatedSprite.play()
+	else:
+		$AnimatedSprite.stop()
 	
 	if health <= 0:
 		get_tree().change_scene("res://Game_Over.tscn")
