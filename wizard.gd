@@ -6,6 +6,9 @@ var speed : int = 400
 var jumpForce : int = 600
 var gravity : int = 800
 var FIREBALL = preload("res://fireball.tscn")
+var max_health : int = 100
+var health = max_health
+
  
 var vel : Vector2 = Vector2()
 var grounded : bool = false
@@ -33,6 +36,9 @@ func _physics_process(delta):
 		var fireball = FIREBALL.instance()
 		get_parent().add_child(fireball)
 		fireball.position = $Position2D.global_position
+	
+	if health <= 0:
+		get_tree().change_scene("res://Game_Over.tscn")
 	
 	
 

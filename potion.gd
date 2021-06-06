@@ -16,6 +16,12 @@ func _ready():
 #	pass
 
 
+
+
 func _on_potion_body_entered(body):
 	if body.name == "wizard":
+		if $"../wizard".health < 80:
+			$"../wizard".health += 20
+		elif $"../wizard".health < 100:
+			$"../wizard".health = 100
 		queue_free()

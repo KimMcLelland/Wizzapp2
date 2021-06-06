@@ -18,4 +18,5 @@ func _ready():
 
 func _on_chest_body_entered(body):
 	if body.name == "wizard":
+		$"../wizard".score += 50
 		queue_free()
