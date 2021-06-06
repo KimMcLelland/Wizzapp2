@@ -14,6 +14,10 @@ config/name="Wizzapp2"
 run/main_scene="res://Title.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/height=665
+
 [input]
 
 jump={

@@ -1,0 +1,111 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/images/label_HP_bg.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/label_score.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/lifebar_fill.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/lifebar_bg.png" type="Texture" id=4]
+[ext_resource path="res://assets/Comfortaa-Bold.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://assets/images/label_Health_Bar.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 5 )
+
+[node name="GUI" type="MarginContainer"]
+anchor_right = 1.0
+__meta__ = {
+"_edit_horizontal_guides_": [ -229.937 ],
+"_edit_use_anchors_": false,
+"_edit_vertical_guides_": [ -774.873 ]
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 53.0
+
+[node name="healthBar" type="HBoxContainer" parent="HBoxContainer"]
+margin_right = 500.0
+margin_bottom = 53.0
+
+[node name="background" type="NinePatchRect" parent="HBoxContainer/healthBar"]
+margin_right = 100.0
+margin_bottom = 53.0
+rect_min_size = Vector2( 100, 40 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="title" type="TextureRect" parent="HBoxContainer/healthBar/background"]
+margin_left = 9.0
+margin_top = 8.34961
+margin_right = 50.0
+margin_bottom = 43.3496
+texture = ExtResource( 6 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="number" type="Label" parent="HBoxContainer/healthBar/background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -3.96851
+margin_top = -1.52588e-05
+margin_right = -3.96851
+margin_bottom = -1.52588e-05
+custom_fonts/font = SubResource( 1 )
+text = "100"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="guage" type="TextureProgress" parent="HBoxContainer/healthBar"]
+margin_left = 104.0
+margin_right = 500.0
+margin_bottom = 53.0
+value = 100.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 3 )
+
+[node name="score" type="HBoxContainer" parent="HBoxContainer"]
+margin_left = 504.0
+margin_right = 604.0
+margin_bottom = 53.0
+
+[node name="background" type="NinePatchRect" parent="HBoxContainer/score"]
+margin_right = 100.0
+margin_bottom = 53.0
+rect_min_size = Vector2( 100, 40 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="title" type="TextureRect" parent="HBoxContainer/score/background"]
+margin_left = 9.0
+margin_top = 8.0
+margin_right = 55.0
+margin_bottom = 54.0
+texture = ExtResource( 2 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="number" type="Label" parent="HBoxContainer/score/background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -3.96851
+margin_top = -1.52588e-05
+margin_right = -3.96851
+margin_bottom = -1.52588e-05
+custom_fonts/font = SubResource( 1 )
+text = "0"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

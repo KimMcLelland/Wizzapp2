@@ -28,7 +28,8 @@ func _physics_process(delta):
 	if Input.is_action_pressed("jump") and is_on_floor():
 		vel.y -= jumpForce
 	position.x = clamp(position.x, 25, screen_size.x-25)
-	if Input.is_action_pressed("fire"):
+	position.y = clamp(position.y, 25, screen_size.y+50)
+	if Input.is_action_just_released("fire"):
 		var fireball = FIREBALL.instance()
 		get_parent().add_child(fireball)
 		fireball.position = $Position2D.global_position

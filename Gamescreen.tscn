@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://wizard.tscn" type="PackedScene" id=1]
 [ext_resource path="res://new_tileset.tres" type="TileSet" id=2]
@@ -7,82 +7,101 @@
 [ext_resource path="res://chest.tscn" type="PackedScene" id=5]
 [ext_resource path="res://coin.tscn" type="PackedScene" id=6]
 [ext_resource path="res://castle.tscn" type="PackedScene" id=7]
+[ext_resource path="res://GUI.tscn" type="PackedScene" id=8]
 
 [node name="Gamescreen" type="Node"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_top = -7.0
-margin_right = 1023.0
-margin_bottom = 592.0
-color = Color( 0.176471, 0.811765, 0.454902, 1 )
+margin_left = 1.0
+margin_top = 54.0
+margin_right = 1020.0
+margin_bottom = 654.0
+color = Color( 0.2, 0.87451, 0.87451, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TileMap" type="TileMap" parent="ColorRect"]
+position = Vector2( 1, 3 )
 tile_set = ExtResource( 2 )
 cell_size = Vector2( 50, 50 )
 format = 1
 tile_data = PoolIntArray( 65536, 0, 0, 65537, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65546, 4, 0, 65547, 4, 0, 65548, 4, 0, 65549, 4, 0, 65552, 4, 0, 65553, 4, 0, 131087, 0, 0, 131088, 0, 0, 131089, 0, 0, 131090, 0, 0, 196612, 0, 0, 196626, 4, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262161, 4, 0, 327680, 4, 0, 327681, 0, 0, 327682, 0, 0, 327689, 4, 0, 327690, 4, 0, 327691, 4, 0, 327692, 4, 0, 393233, 0, 0, 393234, 0, 0, 458756, 4, 0, 458757, 4, 0, 458758, 4, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 589833, 4, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589839, 0, 0, 589840, 0, 0, 589841, 0, 0, 720896, 0, 0, 720897, 0, 0, 720898, 0, 0, 720899, 0, 0, 720900, 0, 0, 720901, 0, 0, 720902, 0, 0, 720903, 0, 0, 720904, 0, 0, 720905, 0, 0, 720906, 0, 0, 720907, 0, 0, 720908, 0, 0, 720909, 0, 0, 720910, 0, 0, 720911, 0, 0, 720912, 0, 0, 720913, 0, 0, 720914, 0, 0, 720915, 0, 0 )
 
+[node name="ColorRect2" type="ColorRect" parent="ColorRect"]
+margin_left = -1.0
+margin_top = -54.0
+margin_right = 1019.0
+margin_bottom = -2.0
+color = Color( 0.2, 0.87451, 0.87451, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="wizard" parent="." instance=ExtResource( 1 )]
-position = Vector2( 21, 521 )
+position = Vector2( 21, 581 )
 
 [node name="goblin" parent="." instance=ExtResource( 3 )]
-position = Vector2( 768, 421 )
+position = Vector2( 770, 487 )
 speed = 150
 moveDist = 120
 
 [node name="goblin2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 267.497, 368.189 )
+position = Vector2( 262.497, 435.189 )
 speed = 150
 moveDist = 120
 
 [node name="goblin3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 512.498, 171.189 )
+position = Vector2( 518.498, 236.189 )
 speed = 150
 moveDist = 100
 
 [node name="goblin4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 64.4975, 224.189 )
+position = Vector2( 69.4975, 288.189 )
 speed = 150
 moveDist = 75
 
 [node name="castle" parent="." instance=ExtResource( 7 )]
-position = Vector2( 915, 57 )
+position = Vector2( 919, 119 )
 
 [node name="coin" parent="." instance=ExtResource( 6 )]
-position = Vector2( 86, 35 )
+position = Vector2( 75, 104 )
 
 [node name="coin2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 352, 263 )
+position = Vector2( 364, 356 )
 
 [node name="coin3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 571, 429 )
+position = Vector2( 562, 500 )
 
 [node name="coin4" parent="." instance=ExtResource( 6 )]
-position = Vector2( 686, 538 )
+position = Vector2( 689, 598 )
 
 [node name="coin5" parent="." instance=ExtResource( 6 )]
-position = Vector2( 255, 534 )
+position = Vector2( 251, 601 )
 
 [node name="coin6" parent="." instance=ExtResource( 6 )]
-position = Vector2( 931, 285 )
+position = Vector2( 925, 350 )
 
 [node name="chest" parent="." instance=ExtResource( 5 )]
-position = Vector2( 406.755, 30 )
+position = Vector2( 396.755, 98 )
 
 [node name="potion" parent="." instance=ExtResource( 4 )]
-position = Vector2( 28, 31 )
+position = Vector2( 27, 97 )
 
 [node name="potion2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 777, 255 )
+position = Vector2( 779, 331 )
 
 [node name="potion3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 225, 379 )
+position = Vector2( 224, 453 )
 
 [node name="potion4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 789, 75 )
+position = Vector2( 796, 146 )
 
 [node name="coin7" parent="." instance=ExtResource( 6 )]
-position = Vector2( 679, 58 )
+position = Vector2( 668, 182 )
+
+[node name="GUI" parent="." instance=ExtResource( 8 )]
+margin_left = -2.0
+margin_top = 1.0
+margin_right = -2.0
+margin_bottom = 54.0
