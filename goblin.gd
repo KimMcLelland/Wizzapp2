@@ -40,3 +40,5 @@ func move_to (current, to, step):
 func _on_goblin_body_entered(body):
 	if body.name == "fireball":
 		queue_free()
+	if body.name == "wizard":
+		$"../wizard".health -= 20

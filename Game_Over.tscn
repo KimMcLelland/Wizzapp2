@@ -1,0 +1,33 @@
+[gd_scene format=2]
+
+[node name="Game_Over" type="Node"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 665.0
+color = Color( 0.2, 0.87451, 0.87451, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+margin_left = 416.0
+margin_top = 253.0
+margin_right = 637.0
+margin_bottom = 364.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect/ColorRect"]
+margin_left = -59.459
+margin_top = -23.7505
+margin_right = 290.541
+margin_bottom = 131.249
+text = "GAME OVER!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

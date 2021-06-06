@@ -18,4 +18,5 @@ func _ready():
 
 func _on_coin_body_entered(body):
 	if body.name == "wizard":
+		$"../wizard".score += 20
 		queue_free()
